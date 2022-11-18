@@ -1,14 +1,7 @@
-import {NgModule} from '@angular/core';
-import {MatNativeDateModule} from '@angular/material/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from '../material-module';
-import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
-
+import { NgModule } from '@angular/core';
 // import {TableBasicExample} from './app/table-basic-example';
 import { FeatOneComponent } from './feat-one';
-import {TableModule} from '../table/table-module';
+import { TableModule } from '../table/table-module';
 
 // Default MatFormField appearance to 'fill' as that is the new recommended approach and the
 // `legacy` and `standard` appearances are scheduled for deprecation in version 10.
@@ -17,10 +10,10 @@ import {TableModule} from '../table/table-module';
   imports: [TableModule],
   entryComponents: [],
   declarations: [FeatOneComponent],
-  providers: []
+  exports: [FeatOneComponent],
+  providers: [],
 })
 export class FeatModule {}
-
 
 /**  Copyright 2020 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that

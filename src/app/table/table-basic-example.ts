@@ -31,7 +31,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class TableBasicExample {
   displayedColumns: string[] = [
     'position',
-    'name', //'weight', 'symbol'
+    'name', 'weight', //'symbol'
   ];
   dataSource = ELEMENT_DATA;
 }

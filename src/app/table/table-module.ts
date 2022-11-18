@@ -1,6 +1,8 @@
-import {NgModule} from '@angular/core';
-import {DemoMaterialModule} from '../material-module';
-import {TableBasicExample} from './table-basic-example';
+import { NgModule } from '@angular/core';
+import { DemoMaterialModule } from '../material-module';
+import { HostDirective } from './host.directive';
+import { TableBasicExample } from './table-basic-example';
+import { WrapperComponent } from './wrapper.component';
 
 // Default MatFormField appearance to 'fill' as that is the new recommended approach and the
 // `legacy` and `standard` appearances are scheduled for deprecation in version 10.
@@ -9,11 +11,10 @@ import {TableBasicExample} from './table-basic-example';
   imports: [DemoMaterialModule],
   entryComponents: [],
   providers: [],
-  declarations: [TableBasicExample],
-  exports:[TableBasicExample],
+  declarations: [TableBasicExample, HostDirective, WrapperComponent],
+  exports: [TableBasicExample, WrapperComponent],
 })
 export class TableModule {}
-
 
 /**  Copyright 2020 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
