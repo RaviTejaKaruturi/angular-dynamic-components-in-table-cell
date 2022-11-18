@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 // import {TableBasicExample} from './app/table-basic-example';
-import { FeatOneComponent } from './feat-one';
+import {
+  FeatOneComponent,
+  FeatDynamicComponent,
+  FeatDynamic2Component,
+} from './feat-one';
 import { TableModule } from '../table/table-module';
 
 // Default MatFormField appearance to 'fill' as that is the new recommended approach and the
@@ -9,7 +13,7 @@ import { TableModule } from '../table/table-module';
 @NgModule({
   imports: [TableModule],
   entryComponents: [],
-  declarations: [FeatOneComponent],
+  declarations: [FeatOneComponent, FeatDynamicComponent, FeatDynamic2Component],
   exports: [FeatOneComponent],
   providers: [],
 })
