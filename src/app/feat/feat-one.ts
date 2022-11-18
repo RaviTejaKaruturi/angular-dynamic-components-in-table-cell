@@ -13,9 +13,13 @@ export class FeatOneComponent {
 @Component({
   selector: 'dynamic-one',
   template: `
-  <button (click)="hello($event)">{{data.name}}</button>
+  <button [satPopoverAnchor]='popover' (click)="popover.toggle()">{{data.name}}</button>
+
+  <sat-popover #popover horizontalAlign="after" verticalAlign="above">
+  <button>xyz</button>
   <span (click) ="hello($event)" 
   style="padding-left: 10px; cursor:pointer">&#8942;</span>
+  </sat-popover>
   `,
 })
 export class FeatDynamicComponent {
